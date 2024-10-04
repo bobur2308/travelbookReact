@@ -13,7 +13,7 @@ function Add() {
 
   const handleSubmit = async (e)=>{
     e.preventDefault()
-    await axios.post("http://localhost:5000/api/travel/add",{
+    await axios.post("https://travelbook-node.vercel.app/api/travel/add",{
       title,
       descr,
       image

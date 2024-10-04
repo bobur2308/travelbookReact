@@ -12,14 +12,14 @@ function UpdateBook() {
   const {id} = useParams()
   const navigate = useNavigate()
   const fetchData = async ()=>{
-    const {data} = await axios.get(`http://localhost:5000/api/travel/${id}`)
+    const {data} = await axios.get(`https://travelbook-node.vercel.app/api/travel/${id}`)
     setTitle(data.travel.title)
     setDescr(data.travel.descr)
     setImage(data.travel.image)
   }
   const updateHandler = async(e)=>{
     e.preventDefault()
-    await axios.put(`http://localhost:5000/api/travel/${id}`,{
+    await axios.put(`https://travelbook-node.vercel.app/api/travel/${id}`,{
       title,
       descr,
       image

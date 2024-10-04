@@ -7,7 +7,7 @@ function Travelbook() {
   const [id,setId] = useState('')
 
   const fetchData = async ()=>{
-    const {data}  = await axios.get('http://localhost:5000/api/travel');
+    const {data}  = await axios.get('https://travelbook-node.vercel.app/api/travel');
     setTravelBook(data.travels)
   }
   useEffect(()=>{
@@ -16,7 +16,7 @@ function Travelbook() {
 
   const deleteHandler = async (e)=>{
     e.preventDefault()
-    await axios.delete(`http://localhost:5000/api/travel/${id}`);
+    await axios.delete(`https://travelbook-node.vercel.app/api/travel/${id}`);
     fetchData()
   }
 
