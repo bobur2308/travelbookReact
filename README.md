@@ -1,2 +1,2 @@
 MERN STACK project
-Project on server: "https://travelbook-react.vercel.app/"
+on server: "https://travelbook-react.vercel.app/"
